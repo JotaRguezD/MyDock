@@ -57,9 +57,8 @@ dmg)
     mkdir -p dist
     rm -f "$DMG"
     hdiutil create -volname "MyDock" -srcfolder "$STAGE" -format UDZO -ov "$DMG" >/dev/null
-    # Huella para publicar junto al .dmg: quien lo descarga puede comprobar que es el auténtico.
-    (cd dist && shasum -a 256 "$(basename "$DMG")" > "$(basename "$DMG").sha256")
     echo "DMG: $DMG"
-    echo "SHA-256: $(cut -d' ' -f1 "$DMG.sha256")"
+    # GitHub muestra esta misma huella junto al .dmg al publicarlo: sirve para comprobar que se subió bien.
+    echo "SHA-256: $(shasum -a 256 "$DMG" | cut -d' ' -f1)"
     ;;
 esac

@@ -118,13 +118,13 @@ Si dices que no, el widget mostrará «Sin permiso»; un clic te lleva al ajuste
 
 - **Runtime reforzado de macOS**: ningún otro programa puede inyectar código en MyDock para aprovechar sus permisos. Además, MyDock solo puede pedir los permisos de la tabla anterior.
 - **Firma**: todas las versiones están firmadas con el mismo certificado, así que macOS reconoce las actualizaciones como la misma app y conserva tus permisos.
-- **Comprueba que el `.dmg` es auténtico**: cada versión publica su huella SHA-256 junto al `.dmg`. En la app Terminal, escribe:
+- **Comprueba que el `.dmg` es auténtico**: en la página de cada versión, GitHub muestra la huella SHA-256 del `.dmg` junto a su nombre, en *Assets*. En la app Terminal, escribe:
 
   ```bash
   shasum -a 256 ~/Downloads/MyDock-x.y.z.dmg
   ```
 
-  El resultado debe coincidir exactamente con la huella publicada en la página de la versión. Si no coincide, no lo abras.
+  El resultado debe coincidir exactamente con esa huella. Si no coincide, no lo abras.
 - Descarga MyDock solo desde la [página de versiones oficial](https://github.com/JotaRguezD/MyDock/releases).
 
 ## Preguntas frecuentes
