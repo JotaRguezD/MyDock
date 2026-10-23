@@ -1,0 +1,7 @@
+"NSAppleEventsUsageDescription" = "MyDock steuert Musik oder Spotify für das Musik-Widget und fragt den Finder nach dem Papierkorb.";
+"NSLocationUsageDescription" = "MyDock verwendet deinen ungefähren Standort, um das Wetter vor Ort anzuzeigen.";
+"NSLocationWhenInUseUsageDescription" = "MyDock verwendet deinen ungefähren Standort, um das Wetter vor Ort anzuzeigen.";
+"NSCalendarsFullAccessUsageDescription" = "MyDock zeigt deinen nächsten Termin im Widget „Nächste Termine“.";
+"NSRemindersFullAccessUsageDescription" = "MyDock zeigt deine offenen Erinnerungen und lässt dich sie als erledigt markieren.";
+"NSDownloadsFolderUsageDescription" = "MyDock zeigt deine neuesten Downloads im Widget „Downloads“.";
+"NSDesktopFolderUsageDescription" = "MyDock zeigt deine neuesten Bildschirmfotos, die macOS auf dem Schreibtisch sichert.";

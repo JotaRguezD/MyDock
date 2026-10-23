@@ -1,0 +1,7 @@
+"NSAppleEventsUsageDescription" = "MyDock-ek Musika edo Spotify kontrolatzen ditu musika-widgeterako, eta Finder-i galdetzen dio Zakarrontziari buruz.";
+"NSLocationUsageDescription" = "MyDock-ek gutxi gorabeherako zure kokapena erabiltzen du zauden lekuko eguraldia erakusteko.";
+"NSLocationWhenInUseUsageDescription" = "MyDock-ek gutxi gorabeherako zure kokapena erabiltzen du zauden lekuko eguraldia erakusteko.";
+"NSCalendarsFullAccessUsageDescription" = "MyDock-ek zure hurrengo gertaera erakusten du Hurrengo gertaerak widgetean.";
+"NSRemindersFullAccessUsageDescription" = "MyDock-ek egiteke dituzun oroigarriak erakusten ditu eta eginda gisa markatzen uzten dizu.";
+"NSDownloadsFolderUsageDescription" = "MyDock-ek zure azken deskargak erakusten ditu Deskargak widgetean.";
+"NSDesktopFolderUsageDescription" = "MyDock-ek zure azken pantaila-argazkiak erakusten ditu, macOS-ek Mahaigainean gordetzen dituenak.";

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>MyDock</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
+	<key>CFBundleIdentifier</key>
+	<string>io.github.jotarguezd.mydock</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>es</string>
+		<string>en</string>
+		<string>ca</string>
+		<string>gl</string>
+		<string>eu</string>
+		<string>fr</string>
+		<string>de</string>
+		<string>it</string>
+		<string>pt</string>
+		<string>nb</string>
+		<string>da</string>
+		<string>fi</string>
+		<string>ja</string>
+		<string>zh-Hans</string>
+		<string>ko</string>
+		<string>hi</string>
+		<string>ar</string>
+	</array>
+	<key>CFBundleName</key>
+	<string>MyDock</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>14.0</string>
+	<key>LSUIElement</key>
+	<true/>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>MyDock controla Música o Spotify para el widget de música y le pregunta a Finder por la Papelera.</string>
+	<key>NSCalendarsFullAccessUsageDescription</key>
+	<string>MyDock muestra tu próximo evento en el widget de Próximos eventos.</string>
+	<key>NSDesktopFolderUsageDescription</key>
+	<string>MyDock muestra tus últimas capturas de pantalla, que macOS guarda en el Escritorio.</string>
+	<key>NSDownloadsFolderUsageDescription</key>
+	<string>MyDock muestra tus últimas descargas en el widget de Descargas.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>MyDock usa tu ubicación aproximada para mostrar el tiempo de donde estás.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>MyDock usa tu ubicación aproximada para mostrar el tiempo de donde estás.</string>
+	<key>NSRemindersFullAccessUsageDescription</key>
+	<string>MyDock muestra tus recordatorios pendientes y te deja marcarlos como hechos.</string>
+</dict>
+</plist>

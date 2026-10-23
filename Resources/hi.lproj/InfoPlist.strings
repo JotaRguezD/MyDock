@@ -1,0 +1,7 @@
+"NSAppleEventsUsageDescription" = "MyDock संगीत विजेट के लिए Music या Spotify को नियंत्रित करता है और ट्रैश के बारे में Finder से पूछता है।";
+"NSLocationUsageDescription" = "MyDock आप जहाँ हैं वहाँ का मौसम दिखाने के लिए आपके अनुमानित स्थान का उपयोग करता है।";
+"NSLocationWhenInUseUsageDescription" = "MyDock आप जहाँ हैं वहाँ का मौसम दिखाने के लिए आपके अनुमानित स्थान का उपयोग करता है।";
+"NSCalendarsFullAccessUsageDescription" = "MyDock आगामी इवेंट विजेट में आपका अगला इवेंट दिखाता है।";
+"NSRemindersFullAccessUsageDescription" = "MyDock आपके बाकी रिमाइंडर दिखाता है और उन्हें पूरा के रूप में चिह्नित करने देता है।";
+"NSDownloadsFolderUsageDescription" = "MyDock डाउनलोड विजेट में आपके नवीनतम डाउनलोड दिखाता है।";
+"NSDesktopFolderUsageDescription" = "MyDock आपके नवीनतम स्क्रीनशॉट दिखाता है, जिन्हें macOS डेस्कटॉप पर सहेजता है।";

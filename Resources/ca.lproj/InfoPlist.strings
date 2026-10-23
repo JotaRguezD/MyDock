@@ -1,0 +1,7 @@
+"NSAppleEventsUsageDescription" = "MyDock controla Música o Spotify per al giny de música i consulta el Finder sobre la Paperera.";
+"NSLocationUsageDescription" = "MyDock fa servir la teva ubicació aproximada per mostrar el temps d’on ets.";
+"NSLocationWhenInUseUsageDescription" = "MyDock fa servir la teva ubicació aproximada per mostrar el temps d’on ets.";
+"NSCalendarsFullAccessUsageDescription" = "MyDock mostra el teu proper esdeveniment al giny Propers esdeveniments.";
+"NSRemindersFullAccessUsageDescription" = "MyDock mostra els teus recordatoris pendents i et deixa marcar-los com a fets.";
+"NSDownloadsFolderUsageDescription" = "MyDock mostra les teves últimes baixades al giny Baixades.";
+"NSDesktopFolderUsageDescription" = "MyDock mostra les teves últimes captures de pantalla, que macOS desa a l’Escriptori.";

@@ -1,0 +1,7 @@
+"NSAppleEventsUsageDescription" = "MyDock ohjaa Musiikkia tai Spotifya musiikkiwidgetiä varten ja kysyy Finderilta roskakorista.";
+"NSLocationUsageDescription" = "MyDock käyttää likimääräistä sijaintiasi näyttääkseen sään siellä, missä olet.";
+"NSLocationWhenInUseUsageDescription" = "MyDock käyttää likimääräistä sijaintiasi näyttääkseen sään siellä, missä olet.";
+"NSCalendarsFullAccessUsageDescription" = "MyDock näyttää seuraavan tapahtumasi Tulevat tapahtumat -widgetissä.";
+"NSRemindersFullAccessUsageDescription" = "MyDock näyttää jäljellä olevat muistutuksesi ja antaa merkitä ne tehdyiksi.";
+"NSDownloadsFolderUsageDescription" = "MyDock näyttää viimeisimmät latauksesi Lataukset-widgetissä.";
+"NSDesktopFolderUsageDescription" = "MyDock näyttää viimeisimmät kuvakaappauksesi, jotka macOS tallentaa työpöydälle.";

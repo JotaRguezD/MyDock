@@ -1,0 +1,7 @@
+"NSAppleEventsUsageDescription" = "MyDock 会控制“音乐”或 Spotify 用于音乐小组件，并向访达查询废纸篓。";
+"NSLocationUsageDescription" = "MyDock 使用你的大致位置来显示你所在地的天气。";
+"NSLocationWhenInUseUsageDescription" = "MyDock 使用你的大致位置来显示你所在地的天气。";
+"NSCalendarsFullAccessUsageDescription" = "MyDock 会在“即将发生的日程”小组件中显示你的下一个日程。";
+"NSRemindersFullAccessUsageDescription" = "MyDock 会显示你的待办提醒事项，并允许你将其标记为已完成。";
+"NSDownloadsFolderUsageDescription" = "MyDock 会在“下载”小组件中显示你最近的下载。";
+"NSDesktopFolderUsageDescription" = "MyDock 会显示你最近的截屏，macOS 会将其存储在桌面上。";

@@ -1,0 +1,7 @@
+"NSAppleEventsUsageDescription" = "MyDock controls Music or Spotify for the music widget and asks Finder about the Trash.";
+"NSLocationUsageDescription" = "MyDock uses your approximate location to show the weather where you are.";
+"NSLocationWhenInUseUsageDescription" = "MyDock uses your approximate location to show the weather where you are.";
+"NSCalendarsFullAccessUsageDescription" = "MyDock shows your next event in the Upcoming Events widget.";
+"NSRemindersFullAccessUsageDescription" = "MyDock shows your pending reminders and lets you mark them as done.";
+"NSDownloadsFolderUsageDescription" = "MyDock shows your latest downloads in the Downloads widget.";
+"NSDesktopFolderUsageDescription" = "MyDock shows your latest screenshots, which macOS saves to the Desktop.";

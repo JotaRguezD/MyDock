@@ -1,0 +1,7 @@
+"NSAppleEventsUsageDescription" = "يتحكم MyDock في الموسيقى أو Spotify لأداة الموسيقى ويسأل Finder عن سلة المهملات.";
+"NSLocationUsageDescription" = "يستخدم MyDock موقعك التقريبي لعرض الطقس في مكانك.";
+"NSLocationWhenInUseUsageDescription" = "يستخدم MyDock موقعك التقريبي لعرض الطقس في مكانك.";
+"NSCalendarsFullAccessUsageDescription" = "يعرض MyDock حدثك التالي في أداة الأحداث القادمة.";
+"NSRemindersFullAccessUsageDescription" = "يعرض MyDock تذكيراتك المتبقية ويتيح لك وضع علامة عليها كمكتملة.";
+"NSDownloadsFolderUsageDescription" = "يعرض MyDock أحدث تنزيلاتك في أداة التنزيلات.";
+"NSDesktopFolderUsageDescription" = "يعرض MyDock أحدث لقطات الشاشة لديك، والتي يحفظها macOS على سطح المكتب.";

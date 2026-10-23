@@ -1,0 +1,8 @@
+.build/
+build/
+dist/
+.DS_Store
+# Nunca subir certificados ni claves de firma
+*.p12
+*.pem
+*.cer
