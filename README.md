@@ -1,149 +1,151 @@
-<p align="center"><img src="icon/AppIcon.png" width="160" alt="Icono de MyDock"></p>
+<p align="center"><img src="icon/AppIcon.png" width="160" alt="MyDock icon"></p>
+
+<p align="center"><a href="README.md">English</a> · <a href="README.es.md">Español</a> · <a href="README.zh-Hans.md">简体中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.de.md">Deutsch</a> · <a href="README.fr.md">Français</a> · <a href="README.pt.md">Português</a></p>
 
 # MyDock
 
-Un dock para macOS con widgets, separadores y grupos de apps. Funciona junto al Dock de Apple o en su lugar, sin tocar el sistema.
+A dock for macOS with widgets, separators and app groups. It works alongside Apple's Dock or instead of it, without modifying the system.
 
-## Descarga e instalación
+## Download and installation
 
-1. Descarga el archivo **`MyDock-x.y.z.dmg`** de la [última versión](https://github.com/JotaRguezD/MyDock/releases/latest).
-2. Abre el `.dmg` y arrastra **MyDock** a la carpeta **Aplicaciones**.
-3. Abre MyDock desde Aplicaciones.
+1. Download **`MyDock-x.y.z.dmg`** from the [latest release](https://github.com/JotaRguezD/MyDock/releases/latest).
+2. Open the `.dmg` and drag **MyDock** to the **Applications** folder.
+3. Open MyDock from Applications.
 
-### La primera vez que la abres
+### The first time you open it
 
-MyDock no está firmada por un desarrollador verificado por Apple, así que macOS no la abrirá directamente la primera vez:
+MyDock isn't signed by a developer verified by Apple, so macOS won't open it directly the first time:
 
-- **macOS 15 Sequoia o posterior**: al abrirla verás un aviso; pulsa **Aceptar**. Ve a **Ajustes del Sistema › Privacidad y seguridad**, baja hasta el final y pulsa **Abrir igualmente** junto a MyDock. Confirma con tu contraseña.
-- **macOS 14 Sonoma**: haz clic derecho sobre MyDock en Aplicaciones, elige **Abrir** y confirma.
+- **macOS 15 Sequoia or later**: you'll see a warning; click **Done**. Go to **System Settings › Privacy & Security**, scroll to the bottom and click **Open Anyway** next to MyDock. Confirm with your password.
+- **macOS 14 Sonoma**: right-click MyDock in Applications, choose **Open** and confirm.
 
-Solo hay que hacerlo una vez. Las actualizaciones se instalan igual: descarga el nuevo `.dmg` y arrastra MyDock a Aplicaciones para sustituir la anterior. Tus ajustes y permisos se conservan.
+You only need to do this once. Updates install the same way: download the new `.dmg` and drag MyDock to Applications to replace the old one. Your settings and permissions are kept.
 
-### Requisitos
+### Requirements
 
-- macOS 14 Sonoma o posterior.
-- Cualquier Mac: con procesador Intel o con chip Apple (M1, M2, M3…).
+- macOS 14 Sonoma or later.
+- Any Mac: Intel or Apple silicon (M1, M2, M3…).
 
-## Qué hace
+## What it does
 
-### Apps, carpetas y grupos
+### Apps, folders and groups
 
-- **Ancla apps y carpetas** arrastrándolas desde Finder. Para cambiarlas de sitio, arrastra los iconos dentro del dock.
-- **Apps abiertas**: las que no tienes ancladas aparecen solas, después de las ancladas, como en el Dock de Apple. Un punto bajo el icono indica que la app está abierta.
-- **Grupos**: varias apps en un solo icono; al hacer clic se abre una ventanita con todas. Suelta una app encima del grupo para meterla.
-- **Separadores y espacios**: todos los que quieras, donde quieras.
-- **Papelera**, al final del dock como en el de Apple: clic para abrirla, suelta archivos encima para moverlos a la Papelera o un icono del dock para quitarlo, y clic derecho › **Vaciar papelera…** (siempre pide confirmación). Se puede ocultar en Ajustes.
-- **Las apps y los widgets van en zonas separadas**: primero las apps, después los widgets, con un separador entre ambos.
-- **Animaciones**: al abrir una app, su icono rebota hasta que termina de abrirse; los widgets hacen un pequeño pulso al pulsarlos.
+- **Pin apps and folders** by dragging them from Finder. To rearrange them, drag the icons within the dock.
+- **Open apps**: apps you haven't pinned appear automatically after the pinned ones, just like in Apple's Dock. A dot under the icon means the app is open.
+- **Groups**: several apps in a single icon; click it to open a small window with all of them. Drop an app onto a group to add it.
+- **Separators and spaces**: as many as you want, wherever you want.
+- **Trash**, at the end of the dock like in Apple's: click to open it, drop files on it to move them to the Trash or a dock icon to remove it, and right-click › **Empty Trash…** (always asks for confirmation). It can be hidden in Settings.
+- **Apps and widgets live in separate areas**: apps first, then widgets, with a separator between them.
+- **Animations**: when you open an app, its icon bounces until it finishes opening; widgets give a small pulse when clicked.
 
-### Clic derecho en una app
+### Right-clicking an app
 
-| App | Opciones |
+| App | Options |
 |---|---|
-| Anclada | Mostrar en Finder · Mover a grupo · Quitar del dock · **Salir** |
-| Dentro de un grupo | Sacar al dock · Quitar del grupo · **Salir** |
-| Abierta sin anclar | Mantener en el dock · **Salir** |
+| Pinned | Show in Finder · Move to Group · Remove from Dock · **Quit** |
+| Inside a group | Move to Dock · Remove from Group · **Quit** |
+| Open, not pinned | Keep in Dock · **Quit** |
 
-«Salir» siempre es la última opción y aparece en gris si la app no está abierta.
+**Quit** is always the last option and is greyed out if the app isn't open.
 
 ### 16 widgets
 
-| Básicos | Productividad | Sistema | Utilidades |
+| Basics | Productivity | System | Utilities |
 |---|---|---|---|
-| Reloj y fecha | Próximos eventos | Batería | Descargas |
-| Tiempo | Recordatorios | Volumen | Capturas |
-| Música | Pomodoro | Portapapeles | Buscar |
-| CPU y memoria | Nota rápida | Disco y red | Selector de color |
+| Clock & Date | Upcoming Events | Battery | Downloads |
+| Weather | Reminders | Volume | Screenshots |
+| Music | Pomodoro | Clipboard | Search |
+| CPU & Memory | Quick Note | Disk & Network | Color Picker |
 
-- **Reloj y fecha**: al hacer clic abre Calendario.
-- **Tiempo**: el de tu ubicación o el de tus ciudades guardadas; clic derecho › **Ciudad** para cambiar rápidamente. Al hacer clic abre la app Tiempo.
-- **Música**: la canción que suena en Spotify o en Música, con botones de anterior, reproducir/pausar y siguiente. Al hacer clic abre el reproductor.
-- **CPU y memoria**, **Disco y red**: uso en tiempo real; al hacer clic abren el Monitor de Actividad.
-- **Próximos eventos**: tu siguiente evento del Calendario y cuánto falta.
-- **Recordatorios**: tus tareas pendientes; puedes marcarlas como hechas desde el propio dock.
-- **Pomodoro**: temporizador de concentración y descanso, con aviso sonoro.
-- **Nota rápida**: un texto que escribes y se queda guardado en el dock.
-- **Batería**: porcentaje y si está cargando.
-- **Volumen**: silenciar y barra de volumen.
-- **Portapapeles**: lo último que has copiado, para volver a copiarlo con un clic.
-- **Descargas** y **Capturas**: tus últimos archivos, para abrirlos o arrastrarlos a otra app.
-- **Buscar**: encuentra apps y archivos sin abrir Spotlight.
-- **Selector de color**: coge un color de cualquier parte de la pantalla y copia su código.
+- **Clock & Date**: click to open Calendar.
+- **Weather**: for your location or your saved cities; right-click › **City** to switch quickly. Click to open the Weather app.
+- **Music**: the song playing in Spotify or Music, with previous, play/pause and next buttons. Click to open the player.
+- **CPU & Memory**, **Disk & Network**: live usage; click to open Activity Monitor.
+- **Upcoming Events**: your next Calendar event and how long until it starts.
+- **Reminders**: your pending tasks; you can mark them as done right from the dock.
+- **Pomodoro**: focus and break timer, with a sound when it ends.
+- **Quick Note**: a short text you write that stays in the dock.
+- **Battery**: percentage and whether it's charging.
+- **Volume**: mute and a volume slider.
+- **Clipboard**: what you copied recently, to copy it again with one click.
+- **Downloads** and **Screenshots**: your latest files, to open them or drag them into another app.
+- **Search**: find apps and files without opening Spotlight.
+- **Color Picker**: pick a color from anywhere on screen and copy its code.
 
-Cada widget solo puede estar una vez en el dock.
+Each widget can only be added once.
 
-### Personalización
+### Customization
 
-- **Cada widget**: versión **compacta** (del tamaño de un icono) o **amplia**, **color de fondo** y sus propias opciones: formato de 12 o 24 horas, segundos, ciudades del tiempo, °C o °F, minutos del Pomodoro, cuántos elementos mostrar…
-- **Posición**: abajo, a la izquierda o a la derecha.
-- **Tamaño de los iconos**: pequeño, mediano o grande.
-- **Ocultar automáticamente**: el dock se esconde y vuelve al llevar el ratón al borde de la pantalla.
-- **Qué dock usar**: solo MyDock, MyDock junto al de Apple, o volver al de Apple.
-- **Ajustar ventanas al dock** (opcional): las ventanas maximizadas se paran donde empieza MyDock, como con el Dock de Apple. Si el dock se oculta automáticamente, las ventanas ocupan toda la pantalla. Con una app a pantalla completa, MyDock se esconde y aparece al llevar el ratón al borde.
-- **Abrir al iniciar sesión**.
-- **Modo claro u oscuro**: sigue el del Mac.
-- **17 idiomas**: español, inglés, catalán, gallego, euskera, francés, alemán, italiano, portugués, noruego, danés, finés, japonés, chino simplificado, coreano, hindi y árabe. Usa el del Mac o el que elijas en Ajustes.
+- **Each widget**: **compact** (icon-sized) or **wide** version, **background color** and its own options: 12- or 24-hour format, seconds, weather cities, °C or °F, Pomodoro minutes, how many items to show…
+- **Position**: bottom, left or right.
+- **Icon size**: small, medium or large.
+- **Automatically Hide**: the dock hides and comes back when you move the pointer to the edge of the screen.
+- **Dock to Use**: MyDock only, MyDock alongside Apple's Dock, or back to Apple's.
+- **Fit windows to the dock** (optional): maximized windows stop where MyDock begins, like with Apple's Dock. If the dock hides automatically, windows use the whole screen. With an app in full screen, MyDock hides and appears when you move the pointer to the edge.
+- **Open at Login**.
+- **Light or dark mode**: follows your Mac.
+- **17 languages**: English, Spanish, Catalan, Galician, Basque, French, German, Italian, Portuguese, Norwegian, Danish, Finnish, Japanese, Simplified Chinese, Korean, Hindi and Arabic. It uses your Mac's language or the one you choose in Settings.
 
-## Uso
+## Usage
 
-- **Clic derecho en el fondo del dock**: añadir separadores, espacios, grupos y widgets, y las opciones principales (posición, tamaño, ocultar, qué dock usar…).
-- **Clic derecho en un widget**: sus ajustes, versión compacta o amplia, y quitarlo.
-- **Ajustes…** (en el clic derecho del fondo): una ventana con todas las opciones. A la izquierda, **General** y un apartado por cada widget; el botón **+** añade widgets.
+- **Right-click the dock background**: add separators, spaces, groups and widgets, plus the main options (position, size, hiding, which dock to use…).
+- **Right-click a widget**: its settings, compact or wide version, and remove it.
+- **Settings…** (in the background right-click menu): a window with every option. On the left, **General** and one section per widget; the **+** button adds widgets.
 
-> El Dock de Apple no deja sacar sus iconos para llevarlos a otra app: al arrastrar uno fuera, lo elimina. Añade las apps a MyDock desde Finder.
+> Apple's Dock doesn't let you drag its icons into another app: dragging one out removes it. Add apps to MyDock from Finder.
 
-## Permisos
+## Permissions
 
-MyDock solo pide un permiso cuando algo lo necesita, y macOS lo recuerda:
+MyDock only asks for a permission when something needs it, and macOS remembers it:
 
-| Para | Permiso |
+| For | Permission |
 |---|---|
-| Tiempo de tu ubicación | Ubicación (opcional: sin él, añade tus ciudades a mano) |
-| Música y Papelera | Controlar Spotify o Música, y Finder (para saber si la Papelera tiene algo y vaciarla) |
-| Próximos eventos | Calendario |
-| Recordatorios | Recordatorios |
-| Descargas | Carpeta Descargas |
-| Capturas | Carpeta Escritorio (o donde guardes las capturas) |
-| Ajustar ventanas al dock | Accesibilidad |
+| Weather for your location | Location (optional: without it, add your cities by hand) |
+| Music and Trash | Control Spotify or Music, and Finder (to know whether the Trash has items and to empty it) |
+| Upcoming Events | Calendar |
+| Reminders | Reminders |
+| Downloads | Downloads folder |
+| Screenshots | Desktop folder (or wherever you save screenshots) |
+| Fit windows to the dock | Accessibility |
 
-Si dices que no, el widget mostrará «Sin permiso»; un clic te lleva al ajuste para darlo.
+If you say no, the widget shows "No permission"; clicking it takes you to the setting to grant it.
 
-## Privacidad
+## Privacy
 
-- No hay cuentas ni analíticas. Tu configuración se guarda solo en tu Mac.
-- El widget del tiempo envía a [Open-Meteo](https://open-meteo.com) solo unas coordenadas redondeadas (precisión de ~1 km) para obtener la temperatura. Los nombres de las ciudades se buscan con el servicio de mapas de Apple.
-- El historial del portapapeles solo está en memoria: no se guarda en disco, se borra al cerrar MyDock y no incluye lo que copian los gestores de contraseñas.
+- No accounts and no analytics. Your settings are stored only on your Mac.
+- The weather widget sends [Open-Meteo](https://open-meteo.com) only rounded coordinates (about 1 km precision) to get the temperature. City names are looked up with Apple's maps service.
+- The clipboard history is kept in memory only: it's never written to disk, it's cleared when MyDock quits, and it skips anything copied by password managers.
 
-## Seguridad
+## Security
 
-- **Runtime reforzado de macOS**: ningún otro programa puede inyectar código en MyDock para aprovechar sus permisos. Además, MyDock solo puede pedir los permisos de la tabla anterior.
-- **Firma**: todas las versiones están firmadas con el mismo certificado, así que macOS reconoce las actualizaciones como la misma app y conserva tus permisos.
-- **Comprueba que el `.dmg` es auténtico**: en la página de cada versión, GitHub muestra la huella SHA-256 del `.dmg` junto a su nombre, en *Assets*. En la app Terminal, escribe:
+- **macOS Hardened Runtime**: no other program can inject code into MyDock to take advantage of its permissions. MyDock can also only request the permissions in the table above.
+- **Signing**: every release is signed with the same certificate, so macOS recognizes updates as the same app and keeps your permissions.
+- **Check that the `.dmg` is genuine**: on each release page, GitHub shows the `.dmg`'s SHA-256 fingerprint next to its name, under *Assets*. In the Terminal app, type:
 
   ```bash
   shasum -a 256 ~/Downloads/MyDock-x.y.z.dmg
   ```
 
-  El resultado debe coincidir exactamente con esa huella. Si no coincide, no lo abras.
-- Descarga MyDock solo desde la [página de versiones oficial](https://github.com/JotaRguezD/MyDock/releases).
+  The result must match that fingerprint exactly. If it doesn't, don't open it.
+- Only download MyDock from the [official releases page](https://github.com/JotaRguezD/MyDock/releases).
 
-## Preguntas frecuentes
+## FAQ
 
-**¿Puedo dejar de ver el Dock de Apple?**
-Sí: clic derecho › **Dock a usar › Solo MyDock**. Al cerrar MyDock, el Dock de Apple vuelve a aparecer tal y como lo tenías, incluso si MyDock se cierra de golpe por un fallo o con «Forzar salida».
+**Can I stop seeing Apple's Dock?**
+Yes: right-click › **Dock to Use › MyDock Only**. When MyDock quits, Apple's Dock comes back exactly as you had it, even if MyDock crashes or is force quit.
 
-**Al maximizar una ventana se mete por debajo de MyDock.**
-Activa **Ajustar ventanas al dock** en Ajustes › General y da el permiso de Accesibilidad.
+**When I maximize a window, it goes under MyDock.**
+Turn on **Fit windows to the dock** in Settings › General and grant the Accessibility permission.
 
-**¿Por qué no aparece la canción que escucho?**
-El widget de música funciona con Spotify y con Música de Apple. Otros reproductores no se detectan.
+**Why doesn't the song I'm listening to show up?**
+The music widget works with Spotify and Apple's Music app. Other players aren't detected.
 
-## Desinstalar
+## Uninstall
 
-1. Desactiva **Abrir al iniciar sesión** y elige **Salir de MyDock**. Si usabas «Solo MyDock», el Dock de Apple vuelve a aparecer como lo tenías.
-2. Borra MyDock de Aplicaciones.
-3. Si quieres borrar también tus ajustes, borra la carpeta `~/Library/Application Support/MyDock`.
+1. Turn off **Open at Login** and choose **Quit MyDock**. If you were using "MyDock Only", Apple's Dock comes back as you had it.
+2. Delete MyDock from Applications.
+3. To also delete your settings, delete the folder `~/Library/Application Support/MyDock`.
 
-## Licencia
+## License
 
 [MIT](LICENSE) © 2026 [JotaRguezD](https://github.com/JotaRguezD)
