@@ -1,4 +1,4 @@
-"NSAppleEventsUsageDescription" = "MyDock contrôle Musique ou Spotify pour le widget Musique et interroge le Finder sur la corbeille.";
+"NSAppleEventsUsageDescription" = "MyDock interroge le Finder sur la corbeille : si elle contient des éléments, et pour la vider.";
 "NSLocationUsageDescription" = "MyDock utilise votre position approximative pour afficher la météo de l’endroit où vous êtes.";
 "NSLocationWhenInUseUsageDescription" = "MyDock utilise votre position approximative pour afficher la météo de l’endroit où vous êtes.";
 "NSCalendarsFullAccessUsageDescription" = "MyDock affiche votre prochain événement dans le widget Prochains événements.";

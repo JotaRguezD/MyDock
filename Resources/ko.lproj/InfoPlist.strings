@@ -1,4 +1,4 @@
-"NSAppleEventsUsageDescription" = "MyDock은 음악 위젯을 위해 음악 또는 Spotify를 제어하고, 휴지통 상태를 Finder에 확인합니다.";
+"NSAppleEventsUsageDescription" = "MyDock은 휴지통에 항목이 있는지 확인하고 비우기 위해 Finder에 요청합니다.";
 "NSLocationUsageDescription" = "MyDock은 현재 있는 곳의 날씨를 표시하기 위해 대략적인 위치를 사용합니다.";
 "NSLocationWhenInUseUsageDescription" = "MyDock은 현재 있는 곳의 날씨를 표시하기 위해 대략적인 위치를 사용합니다.";
 "NSCalendarsFullAccessUsageDescription" = "MyDock은 ‘다가오는 이벤트’ 위젯에 다음 이벤트를 표시합니다.";

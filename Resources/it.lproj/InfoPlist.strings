@@ -1,4 +1,4 @@
-"NSAppleEventsUsageDescription" = "MyDock controlla Musica o Spotify per il widget Musica e chiede al Finder lo stato del Cestino.";
+"NSAppleEventsUsageDescription" = "MyDock chiede al Finder lo stato del Cestino: se contiene elementi, e per svuotarlo.";
 "NSLocationUsageDescription" = "MyDock usa la tua posizione approssimativa per mostrare il meteo di dove ti trovi.";
 "NSLocationWhenInUseUsageDescription" = "MyDock usa la tua posizione approssimativa per mostrare il meteo di dove ti trovi.";
 "NSCalendarsFullAccessUsageDescription" = "MyDock mostra il tuo prossimo evento nel widget Prossimi eventi.";

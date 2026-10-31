@@ -1,4 +1,4 @@
-"NSAppleEventsUsageDescription" = "O MyDock controla o Música ou o Spotify para o widget de música e consulta o Finder sobre o Lixo.";
+"NSAppleEventsUsageDescription" = "O MyDock consulta o Finder sobre o Lixo: se tem itens e para esvaziá-lo.";
 "NSLocationUsageDescription" = "O MyDock usa sua localização aproximada para mostrar o tempo onde você está.";
 "NSLocationWhenInUseUsageDescription" = "O MyDock usa sua localização aproximada para mostrar o tempo onde você está.";
 "NSCalendarsFullAccessUsageDescription" = "O MyDock mostra seu próximo evento no widget Próximos eventos.";

@@ -30,7 +30,7 @@ Das ist nur einmal nötig. Updates werden genauso installiert: Lade die neue `.d
 
 ### Apps, Ordner und Gruppen
 
-- **Apps und Ordner anheften**, indem du sie aus dem Finder ziehst. Zum Umsortieren ziehst du die Symbole innerhalb des Docks.
+- **Apps und Ordner anheften**, indem du sie aus dem Finder ziehst; ein Klick auf einen Ordner öffnet ihn im Finder. Zum Umsortieren ziehst du die Symbole innerhalb des Docks.
 - **Geöffnete Apps**: Nicht angeheftete Apps erscheinen automatisch hinter den angehefteten, wie im Apple-Dock. Ein Punkt unter dem Symbol zeigt, dass die App geöffnet ist.
 - **Gruppen**: mehrere Apps in einem Symbol; ein Klick öffnet ein kleines Fenster mit allen. Ziehe eine App auf eine Gruppe, um sie hinzuzufügen.
 - **Trennlinien und Abstände**: so viele du willst, wo du willst.
@@ -38,15 +38,17 @@ Das ist nur einmal nötig. Updates werden genauso installiert: Lade die neue `.d
 - **Apps und Widgets in getrennten Bereichen**: zuerst die Apps, dann die Widgets, mit einer Trennlinie dazwischen.
 - **Animationen**: Beim Öffnen einer App hüpft ihr Symbol, bis sie gestartet ist; Widgets pulsieren kurz, wenn du sie anklickst.
 
-### Rechtsklick auf eine App
+### Kontextmenüs
+
+Menüs öffnen sich direkt über dem Dock mit einem kleinen Pfeil, der auf das Symbol zeigt – wie im Apple-Dock –, und verdecken so nie die Symbole daneben: Rechtsklick auf ein anderes Symbol, und sein Menü öffnet sich sofort. Das gilt für Apps, Widgets, Gruppen, den Papierkorb und den Dock-Hintergrund.
 
 | App | Optionen |
 |---|---|
-| Angeheftet | Im Finder zeigen · In Gruppe bewegen · Aus dem Dock entfernen · **Beenden** |
-| In einer Gruppe | Ins Dock holen · Aus der Gruppe entfernen · **Beenden** |
-| Geöffnet, nicht angeheftet | Im Dock behalten · **Beenden** |
+| Geöffnet | Ihre Fenster · ihre wichtigsten Aktionen aus dem Menü „Ablage“ (Neues Fenster, Neues Ereignis …) · **Optionen** › · Ausblenden · **Beenden** · Sofort beenden |
+| Angeheftet, geschlossen | Im Finder zeigen · In Gruppe bewegen · Aus dem Dock entfernen · Beenden (ausgegraut) |
+| In einer Gruppe, geschlossen | Ins Dock holen · Aus der Gruppe entfernen · Beenden (ausgegraut) |
 
-**Beenden** ist immer die letzte Option und ist ausgegraut, wenn die App nicht geöffnet ist.
+Unter **Optionen** hat eine geöffnete App dieselben Möglichkeiten wie im geschlossenen Zustand (oder **Im Dock behalten**, wenn sie nicht angeheftet ist). Fenster und Aktionen brauchen die Berechtigung für Bedienungshilfen. Jedes Dock zeigt sein eigenes Menü: Ein Rechtsklick im Apple-Dock öffnet weiterhin das von Apple.
 
 ### 16 Widgets
 
@@ -59,7 +61,7 @@ Das ist nur einmal nötig. Updates werden genauso installiert: Lade die neue `.d
 
 - **Uhr und Datum**: Ein Klick öffnet den Kalender.
 - **Wetter**: für deinen Standort oder deine gespeicherten Städte; Rechtsklick › **Stadt** zum schnellen Wechseln. Ein Klick öffnet die Wetter-App.
-- **Musik**: der Titel, der in Spotify oder Musik läuft, mit Tasten für Zurück, Wiedergabe/Pause und Weiter. Ein Klick öffnet den Player.
+- **Musik**: der Titel, der in einer beliebigen App läuft (Spotify, Musik, ein Browser …), mit Tasten für Zurück, Wiedergabe/Pause und Weiter. Ein Klick öffnet die App, die gerade spielt.
 - **CPU und Speicher**, **Festplatte und Netzwerk**: Auslastung in Echtzeit; ein Klick öffnet die Aktivitätsanzeige.
 - **Nächste Termine**: dein nächster Kalendertermin und wie lange es noch dauert.
 - **Erinnerungen**: deine offenen Aufgaben; du kannst sie direkt im Dock als erledigt markieren.
@@ -77,7 +79,7 @@ Jedes Widget kann nur einmal hinzugefügt werden.
 ### Anpassung
 
 - **Jedes Widget**: **kompakte** (symbolgroße) oder **breite** Version, **Hintergrundfarbe** und eigene Optionen: 12- oder 24-Stunden-Format, Sekunden, Wetter-Städte, °C oder °F, Pomodoro-Minuten, Anzahl der Einträge …
-- **Position**: unten, links oder rechts.
+- **Position**: unten, oben, links oder rechts. Oben, unter der Menüleiste, kann es nur mit deinen Widgets neben dem Apple-Dock laufen.
 - **Symbolgröße**: klein, mittel oder groß.
 - **Automatisch ausblenden**: Das Dock wird ausgeblendet und erscheint wieder, wenn du den Zeiger an den Bildschirmrand bewegst.
 - **Verwendetes Dock**: nur MyDock, MyDock und das Apple-Dock, oder zurück zum Apple-Dock.
@@ -101,12 +103,12 @@ MyDock fragt nur nach einer Berechtigung, wenn etwas sie braucht, und macOS merk
 | Für | Berechtigung |
 |---|---|
 | Wetter für deinen Standort | Ortungsdienste (optional: ohne sie fügst du deine Städte von Hand hinzu) |
-| Musik und Papierkorb | Spotify oder Musik steuern, und den Finder (um zu wissen, ob der Papierkorb etwas enthält, und ihn zu entleeren) |
+| Papierkorb | Finder (um zu wissen, ob der Papierkorb etwas enthält, und ihn zu entleeren) |
 | Nächste Termine | Kalender |
 | Erinnerungen | Erinnerungen |
 | Downloads | Ordner „Downloads“ |
 | Bildschirmfotos | Ordner „Schreibtisch“ (oder wo du Bildschirmfotos sicherst) |
-| Fenster ans Dock anpassen | Bedienungshilfen |
+| Fenster ans Dock anpassen sowie Fenster und Aktionen einer geöffneten App in ihrem Kontextmenü | Bedienungshilfen |
 
 Lehnst du ab, zeigt das Widget „Keine Berechtigung“; ein Klick öffnet die Einstellung, um sie zu erteilen.
 
@@ -138,7 +140,7 @@ Ja: Rechtsklick › **Verwendetes Dock › Nur MyDock**. Wird MyDock beendet, er
 Aktiviere **Fenster ans Dock anpassen** unter Einstellungen › Allgemein und erteile die Berechtigung für Bedienungshilfen.
 
 **Warum wird der Titel, den ich höre, nicht angezeigt?**
-Das Musik-Widget funktioniert mit Spotify und der Musik-App von Apple. Andere Player werden nicht erkannt.
+Das Musik-Widget zeigt, was macOS im Kontrollzentrum unter „Aktuelle Wiedergabe“ anzeigt. Erscheint ein Player dort nicht, kann MyDock ihn auch nicht sehen.
 
 ## Deinstallieren
 

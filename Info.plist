@@ -35,15 +35,15 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.0</string>
+	<string>1.0.1</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>14.0</string>
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSAppleEventsUsageDescription</key>
-	<string>MyDock controla Música o Spotify para el widget de música y le pregunta a Finder por la Papelera.</string>
+	<string>MyDock le pregunta a Finder por la Papelera: si tiene algo y para vaciarla.</string>
 	<key>NSCalendarsFullAccessUsageDescription</key>
 	<string>MyDock muestra tu próximo evento en el widget de Próximos eventos.</string>
 	<key>NSDesktopFolderUsageDescription</key>

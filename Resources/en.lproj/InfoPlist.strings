@@ -1,4 +1,4 @@
-"NSAppleEventsUsageDescription" = "MyDock controls Music or Spotify for the music widget and asks Finder about the Trash.";
+"NSAppleEventsUsageDescription" = "MyDock asks Finder about the Trash: whether it has items, and to empty it.";
 "NSLocationUsageDescription" = "MyDock uses your approximate location to show the weather where you are.";
 "NSLocationWhenInUseUsageDescription" = "MyDock uses your approximate location to show the weather where you are.";
 "NSCalendarsFullAccessUsageDescription" = "MyDock shows your next event in the Upcoming Events widget.";

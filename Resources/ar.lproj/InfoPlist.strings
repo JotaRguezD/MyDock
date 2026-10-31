@@ -1,4 +1,4 @@
-"NSAppleEventsUsageDescription" = "يتحكم MyDock في الموسيقى أو Spotify لأداة الموسيقى ويسأل Finder عن سلة المهملات.";
+"NSAppleEventsUsageDescription" = "يسأل MyDock تطبيق Finder عن سلة المهملات: هل تحتوي على عناصر، ولإفراغها.";
 "NSLocationUsageDescription" = "يستخدم MyDock موقعك التقريبي لعرض الطقس في مكانك.";
 "NSLocationWhenInUseUsageDescription" = "يستخدم MyDock موقعك التقريبي لعرض الطقس في مكانك.";
 "NSCalendarsFullAccessUsageDescription" = "يعرض MyDock حدثك التالي في أداة الأحداث القادمة.";

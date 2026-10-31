@@ -80,6 +80,7 @@ struct GeneralSettingsForm: View {
                 ForEach(AppLanguage.all, id: \.code) { Text($0.name).tag($0.code as String?) }
             }
             Picker(t("Posición"), selection: Binding(get: { store.position }, set: { store.config.position = $0 })) {
+                Text(t("Arriba")).tag(DockPosition.top)
                 Text(t("Izquierda")).tag(DockPosition.left)
                 Text(t("Abajo")).tag(DockPosition.bottom)
                 Text(t("Derecha")).tag(DockPosition.right)

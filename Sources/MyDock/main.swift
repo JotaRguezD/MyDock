@@ -153,6 +153,7 @@ func dockFrame(_ size: NSSize, screen: NSRect, visible: NSRect, _ position: Dock
     case .bottom: origin = NSPoint(x: screen.midX - size.width / 2, y: hidden ? screen.minY - size.height : visible.minY)
     case .left: origin = NSPoint(x: hidden ? screen.minX - size.width : visible.minX, y: visible.midY - size.height / 2)
     case .right: origin = NSPoint(x: hidden ? screen.maxX : visible.maxX - size.width, y: visible.midY - size.height / 2)
+    case .top: origin = NSPoint(x: screen.midX - size.width / 2, y: hidden ? screen.maxY : visible.maxY - size.height)  // bajo la barra de menús
     }
     return NSRect(origin: origin, size: size)
 }
@@ -165,6 +166,7 @@ func isAtEdge(_ mouse: NSPoint, of screen: NSRect, _ position: DockPosition) -> 
     case .bottom: return inX && mouse.y <= screen.minY + 2
     case .left: return inY && mouse.x <= screen.minX + 2
     case .right: return inY && mouse.x >= screen.maxX - 3  // el ratón llega como mucho a maxX - 1
+    case .top: return inX && mouse.y >= screen.maxY - 3
     }
 }
 

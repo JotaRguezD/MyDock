@@ -1,4 +1,4 @@
-"NSAppleEventsUsageDescription" = "MyDock 会控制“音乐”或 Spotify 用于音乐小组件，并向访达查询废纸篓。";
+"NSAppleEventsUsageDescription" = "MyDock 会向访达查询废纸篓：是否有内容，以及用于清倒。";
 "NSLocationUsageDescription" = "MyDock 使用你的大致位置来显示你所在地的天气。";
 "NSLocationWhenInUseUsageDescription" = "MyDock 使用你的大致位置来显示你所在地的天气。";
 "NSCalendarsFullAccessUsageDescription" = "MyDock 会在“即将发生的日程”小组件中显示你的下一个日程。";

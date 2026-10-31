@@ -112,15 +112,32 @@ struct ClockWidget: View {
     }
 }
 
-// MARK: Música (Spotify o Música, vía AppleScript)
+// MARK: Música (cualquier app que suene: Spotify, Música, navegadores…, vía MediaRemote)
 
 final class MusicModel: ObservableObject {
     @Published var player: String?
     @Published var title = ""
     @Published var artist = ""
     @Published var playing = false
+    private var bundleID: String?
 
-    private static let players = [("Spotify", "com.spotify.client"), ("Music", "com.apple.Music")]
+    private static let fallbackPlayers = ["com.spotify.client", "com.apple.Music"]
+    private static let mediaRemote = dlopen("/System/Library/PrivateFrameworks/MediaRemote.framework/MediaRemote", RTLD_NOW)
+    private typealias SendCommand = @convention(c) (UInt32, CFDictionary?) -> Bool
+    private static let sendCommand = dlsym(mediaRemote, "MRMediaRemoteSendCommand").map { unsafeBitCast($0, to: SendCommand.self) }
+    /// Desde macOS 15.4 MediaRemote solo da «ahora suena» a binarios de Apple; osascript lo es, nuestro proceso no.
+    private static let nowPlayingScript = """
+        ObjC.import('Foundation')
+        $.NSBundle.bundleWithPath('/System/Library/PrivateFrameworks/MediaRemote.framework/').load
+        function run() {
+            const R = $.NSClassFromString('MRNowPlayingRequest'), item = R.localNowPlayingItem
+            const client = R.localNowPlayingPlayerPath.client
+            if (item.isNil() || client.isNil()) return ''
+            const info = item.nowPlayingInfo, s = v => v.isNil() ? '' : ObjC.unwrap(v.description)
+            const get = k => info.isNil() ? '' : s(info.objectForKey('kMRMediaRemoteNowPlayingInfo' + k))
+            return [s(client.displayName), s(client.bundleIdentifier), get('Title'), get('Artist'), R.localIsPlaying ? '1' : '0'].join('\\n')
+        }
+        """
     private let queue = DispatchQueue(label: "mydock.music")
     private var timer: Timer?
 
@@ -130,44 +147,41 @@ final class MusicModel: ObservableObject {
     }
 
     func refresh() {
-        // Solo se pregunta a apps abiertas: un «tell application» abriría la app si está cerrada.
-        let open = Set(NSWorkspace.shared.runningApplications.compactMap(\.bundleIdentifier))
-        let names = Self.players.filter { open.contains($0.1) }.map(\.0)
         queue.async { [weak self] in
-            var best: (player: String, title: String, artist: String, playing: Bool)?
-            for name in names {
-                let source = """
-                tell application "\(name)"
-                    if player state is stopped then return ""
-                    return (name of current track) & linefeed & (artist of current track) & linefeed & (player state as string)
-                end tell
-                """
-                guard let out = NSAppleScript(source: source)?.executeAndReturnError(nil).stringValue else { continue }
-                let parts = out.components(separatedBy: "\n")
-                guard parts.count >= 3 else { continue }
-                let found = (player: name, title: parts[0], artist: parts[1], playing: parts[2] == "playing")
-                if best == nil || (found.playing && !best!.playing) { best = found }
-            }
+            let task = Process()
+            task.executableURL = URL(fileURLWithPath: "/usr/bin/osascript")
+            task.arguments = ["-l", "JavaScript", "-e", Self.nowPlayingScript]
+            let pipe = Pipe()
+            task.standardOutput = pipe
+            task.standardError = FileHandle.nullDevice
+            guard (try? task.run()) != nil else { return }
+            let out = String(decoding: pipe.fileHandleForReading.readDataToEndOfFile(), as: UTF8.self)
+            task.waitUntilExit()
+            let parts = out.trimmingCharacters(in: .newlines).components(separatedBy: "\n")
+            let found = parts.count == 5 && !parts[2].isEmpty ? parts : nil
             DispatchQueue.main.async {
                 guard let self else { return }
-                self.player = best?.player
-                self.title = best?.title ?? ""
-                self.artist = best?.artist ?? ""
-                self.playing = best?.playing ?? false
+                self.player = found?[0]
+                self.bundleID = found?[1]
+                self.title = found?[2] ?? ""
+                self.artist = found?[3] ?? ""
+                self.playing = found?[4] == "1"
             }
         }
     }
 
-    /// Abre el reproductor que suena; si no hay ninguno, el primero instalado (Spotify antes que Música).
+    /// Abre la app que suena; si no hay ninguna, el primer reproductor instalado (Spotify antes que Música).
     func openPlayer() {
-        let ids = Self.players.filter { player == nil || $0.0 == player }.map(\.1)
+        let ids = bundleID.map { [$0] } ?? Self.fallbackPlayers
         guard let url = ids.lazy.compactMap({ NSWorkspace.shared.urlForApplication(withBundleIdentifier: $0) }).first else { return }
         NSWorkspace.shared.openApplication(at: url, configuration: .init())
     }
 
-    func send(_ command: String) {
-        guard let player else { return }
-        queue.async { _ = NSAppleScript(source: "tell application \"\(player)\" to \(command)")?.executeAndReturnError(nil) }
+    enum Command: UInt32 { case togglePlayPause = 2, next = 4, previous = 5 }
+
+    func send(_ command: Command) {
+        guard player != nil else { return }
+        _ = Self.sendCommand?(command.rawValue, nil)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { [weak self] in self?.refresh() }
     }
 }
@@ -182,19 +196,19 @@ struct MusicWidget: View {
             if model.player == nil {
                 WidgetLabel(symbol: "music.note", title: compact ? "—" : t("Sin música"), compact: compact, tint: secondaryText)
             } else if compact {
-                Button { model.send("playpause") } label: {
+                Button { model.send(.togglePlayPause) } label: {
                     Image(systemName: model.playing ? "pause.fill" : "play.fill").font(.title3)
                 }
                 .accessibilityLabel(model.playing ? t("Pausar") : t("Reproducir"))
             } else {
                 if s.hideControls != true {
-                    Button { model.send("previous track") } label: { Image(systemName: "backward.fill") }
+                    Button { model.send(.previous) } label: { Image(systemName: "backward.fill") }
                         .accessibilityLabel(t("Anterior"))
-                    Button { model.send("playpause") } label: {
+                    Button { model.send(.togglePlayPause) } label: {
                         Image(systemName: model.playing ? "pause.fill" : "play.fill").font(.title3)
                     }
                     .accessibilityLabel(model.playing ? t("Pausar") : t("Reproducir"))
-                    Button { model.send("next track") } label: { Image(systemName: "forward.fill") }
+                    Button { model.send(.next) } label: { Image(systemName: "forward.fill") }
                         .accessibilityLabel(t("Siguiente"))
                 }
                 VStack(alignment: .leading, spacing: 0) {

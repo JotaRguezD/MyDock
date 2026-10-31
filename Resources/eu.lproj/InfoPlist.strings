@@ -1,4 +1,4 @@
-"NSAppleEventsUsageDescription" = "MyDock-ek Musika edo Spotify kontrolatzen ditu musika-widgeterako, eta Finder-i galdetzen dio Zakarrontziari buruz.";
+"NSAppleEventsUsageDescription" = "MyDock-ek Finder-i galdetzen dio Zakarrontziari buruz: zerbait duen, eta hustutzeko.";
 "NSLocationUsageDescription" = "MyDock-ek gutxi gorabeherako zure kokapena erabiltzen du zauden lekuko eguraldia erakusteko.";
 "NSLocationWhenInUseUsageDescription" = "MyDock-ek gutxi gorabeherako zure kokapena erabiltzen du zauden lekuko eguraldia erakusteko.";
 "NSCalendarsFullAccessUsageDescription" = "MyDock-ek zure hurrengo gertaera erakusten du Hurrengo gertaerak widgetean.";

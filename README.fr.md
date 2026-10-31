@@ -30,7 +30,7 @@ Cette opération n’est à faire qu’une seule fois. Les mises à jour s’ins
 
 ### Apps, dossiers et groupes
 
-- **Épinglez des apps et des dossiers** en les faisant glisser depuis le Finder. Pour les réorganiser, faites glisser les icônes dans le Dock.
+- **Épinglez des apps et des dossiers** en les faisant glisser depuis le Finder ; un clic sur un dossier l’ouvre dans le Finder. Pour les réorganiser, faites glisser les icônes dans le Dock.
 - **Apps ouvertes** : les apps non épinglées apparaissent automatiquement après les apps épinglées, comme dans le Dock d’Apple. Un point sous l’icône indique que l’app est ouverte.
 - **Groupes** : plusieurs apps dans une seule icône ; un clic ouvre une petite fenêtre avec toutes les apps. Déposez une app sur un groupe pour l’y ajouter.
 - **Séparateurs et espaces** : autant que vous voulez, où vous voulez.
@@ -38,15 +38,17 @@ Cette opération n’est à faire qu’une seule fois. Les mises à jour s’ins
 - **Les apps et les widgets sont dans des zones séparées** : d’abord les apps, puis les widgets, avec un séparateur entre les deux.
 - **Animations** : à l’ouverture d’une app, son icône rebondit jusqu’à ce qu’elle soit lancée ; les widgets réagissent par une petite pulsation quand on clique dessus.
 
-### Clic droit sur une app
+### Menus du clic droit
+
+Les menus s’ouvrent juste au-dessus du Dock avec une petite flèche pointant vers l’icône, comme dans le Dock d’Apple, et ne cachent donc jamais les icônes voisines : faites un clic droit sur une autre icône et son menu s’ouvre aussitôt. C’est valable pour les apps, les widgets, les groupes, la corbeille et le fond du Dock.
 
 | App | Options |
 |---|---|
-| Épinglée | Afficher dans le Finder · Déplacer vers un groupe · Retirer du Dock · **Quitter** |
-| Dans un groupe | Sortir dans le Dock · Retirer du groupe · **Quitter** |
-| Ouverte, non épinglée | Garder dans le Dock · **Quitter** |
+| Ouverte | Ses fenêtres · ses actions principales, tirées de son menu Fichier (Nouvelle fenêtre, Nouvel événement…) · **Options** › · Masquer · **Quitter** · Forcer à quitter |
+| Épinglée, fermée | Afficher dans le Finder · Déplacer vers un groupe · Retirer du Dock · Quitter (en gris) |
+| Dans un groupe, fermée | Sortir dans le Dock · Retirer du groupe · Quitter (en gris) |
 
-**Quitter** est toujours la dernière option et apparaît en gris si l’app n’est pas ouverte.
+Dans **Options**, une app ouverte propose les mêmes choix que lorsqu’elle est fermée (ou **Garder dans le Dock** si elle n’est pas épinglée). Les fenêtres et les actions nécessitent l’autorisation Accessibilité. Chaque Dock affiche son propre menu : un clic droit dans le Dock d’Apple ouvre toujours celui d’Apple.
 
 ### 16 widgets
 
@@ -59,7 +61,7 @@ Cette opération n’est à faire qu’une seule fois. Les mises à jour s’ins
 
 - **Horloge et date** : un clic ouvre Calendrier.
 - **Météo** : celle de votre position ou de vos villes enregistrées ; clic droit › **Ville** pour changer rapidement. Un clic ouvre l’app Météo.
-- **Musique** : le morceau en cours dans Spotify ou Musique, avec les boutons précédent, lecture/pause et suivant. Un clic ouvre le lecteur.
+- **Musique** : le morceau en cours dans n’importe quelle app (Spotify, Musique, un navigateur…), avec les boutons précédent, lecture/pause et suivant. Un clic ouvre l’app qui joue.
 - **CPU et mémoire**, **Disque et réseau** : utilisation en temps réel ; un clic ouvre le Moniteur d’activité.
 - **Prochains événements** : votre prochain événement du Calendrier et le temps restant.
 - **Rappels** : vos tâches en attente ; vous pouvez les marquer comme terminées directement depuis le Dock.
@@ -77,7 +79,7 @@ Chaque widget ne peut être ajouté qu’une seule fois.
 ### Personnalisation
 
 - **Chaque widget** : version **compacte** (de la taille d’une icône) ou **large**, **couleur de fond** et ses propres options : format 12 ou 24 heures, secondes, villes de la météo, °C ou °F, minutes du Pomodoro, nombre d’éléments à afficher…
-- **Position** : en bas, à gauche ou à droite.
+- **Position** : en bas, en haut, à gauche ou à droite. En haut, sous la barre des menus, il peut cohabiter avec le Dock d’Apple avec seulement vos widgets.
 - **Taille des icônes** : petite, moyenne ou grande.
 - **Masquer automatiquement** : le Dock se masque et réapparaît quand vous amenez le pointeur au bord de l’écran.
 - **Dock à utiliser** : MyDock uniquement, MyDock et celui d’Apple, ou revenir à celui d’Apple.
@@ -101,12 +103,12 @@ MyDock ne demande une autorisation que lorsqu’une fonction en a besoin, et mac
 | Pour | Autorisation |
 |---|---|
 | Météo de votre position | Localisation (facultatif : sans elle, ajoutez vos villes à la main) |
-| Musique et corbeille | Contrôler Spotify ou Musique, et le Finder (pour savoir si la corbeille contient des éléments et la vider) |
+| Corbeille | Finder (pour savoir si la corbeille contient des éléments et la vider) |
 | Prochains événements | Calendriers |
 | Rappels | Rappels |
 | Téléchargements | Dossier Téléchargements |
 | Captures d’écran | Dossier Bureau (ou l’endroit où vous enregistrez vos captures) |
-| Ajuster les fenêtres au Dock | Accessibilité |
+| Ajuster les fenêtres au Dock, et les fenêtres et actions d’une app ouverte dans son menu du clic droit | Accessibilité |
 
 Si vous refusez, le widget affiche « Sans autorisation » ; un clic ouvre le réglage pour l’accorder.
 
@@ -138,7 +140,7 @@ Oui : clic droit › **Dock à utiliser › MyDock uniquement**. Quand MyDock qu
 Activez **Ajuster les fenêtres au Dock** dans Réglages › Général et accordez l’autorisation Accessibilité.
 
 **Pourquoi le morceau que j’écoute n’apparaît-il pas ?**
-Le widget Musique fonctionne avec Spotify et l’app Musique d’Apple. Les autres lecteurs ne sont pas détectés.
+Le widget Musique affiche ce que macOS indique dans « À l’écoute » du Centre de contrôle. Si un lecteur n’y apparaît pas, MyDock ne peut pas le voir non plus.
 
 ## Désinstallation
 

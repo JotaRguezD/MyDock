@@ -1,4 +1,4 @@
-"NSAppleEventsUsageDescription" = "MyDock styrer Musikk eller Spotify for musikkwidgeten og spør Finder om papirkurven.";
+"NSAppleEventsUsageDescription" = "MyDock spør Finder om papirkurven: om den inneholder noe, og for å tømme den.";
 "NSLocationUsageDescription" = "MyDock bruker den omtrentlige posisjonen din for å vise været der du er.";
 "NSLocationWhenInUseUsageDescription" = "MyDock bruker den omtrentlige posisjonen din for å vise været der du er.";
 "NSCalendarsFullAccessUsageDescription" = "MyDock viser den neste hendelsen din i widgeten Kommende hendelser.";

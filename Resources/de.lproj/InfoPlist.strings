@@ -1,4 +1,4 @@
-"NSAppleEventsUsageDescription" = "MyDock steuert Musik oder Spotify für das Musik-Widget und fragt den Finder nach dem Papierkorb.";
+"NSAppleEventsUsageDescription" = "MyDock fragt den Finder nach dem Papierkorb: ob er etwas enthält, und um ihn zu entleeren.";
 "NSLocationUsageDescription" = "MyDock verwendet deinen ungefähren Standort, um das Wetter vor Ort anzuzeigen.";
 "NSLocationWhenInUseUsageDescription" = "MyDock verwendet deinen ungefähren Standort, um das Wetter vor Ort anzuzeigen.";
 "NSCalendarsFullAccessUsageDescription" = "MyDock zeigt deinen nächsten Termin im Widget „Nächste Termine“.";

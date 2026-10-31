@@ -1,4 +1,4 @@
-"NSAppleEventsUsageDescription" = "MyDockは、ミュージックウィジェットのためにミュージックまたはSpotifyを操作し、ゴミ箱の状態をFinderに問い合わせます。";
+"NSAppleEventsUsageDescription" = "MyDockは、ゴミ箱に項目があるかの確認と空にするために、Finderに問い合わせます。";
 "NSLocationUsageDescription" = "MyDockは、現在地の天気を表示するためにおおよその位置情報を使用します。";
 "NSLocationWhenInUseUsageDescription" = "MyDockは、現在地の天気を表示するためにおおよその位置情報を使用します。";
 "NSCalendarsFullAccessUsageDescription" = "MyDockは、「今後の予定」ウィジェットに次の予定を表示します。";

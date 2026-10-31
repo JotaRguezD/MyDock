@@ -30,7 +30,7 @@ You only need to do this once. Updates install the same way: download the new `.
 
 ### Apps, folders and groups
 
-- **Pin apps and folders** by dragging them from Finder. To rearrange them, drag the icons within the dock.
+- **Pin apps and folders** by dragging them from Finder; clicking a folder opens it in Finder. To rearrange them, drag the icons within the dock.
 - **Open apps**: apps you haven't pinned appear automatically after the pinned ones, just like in Apple's Dock. A dot under the icon means the app is open.
 - **Groups**: several apps in a single icon; click it to open a small window with all of them. Drop an app onto a group to add it.
 - **Separators and spaces**: as many as you want, wherever you want.
@@ -38,15 +38,17 @@ You only need to do this once. Updates install the same way: download the new `.
 - **Apps and widgets live in separate areas**: apps first, then widgets, with a separator between them.
 - **Animations**: when you open an app, its icon bounces until it finishes opening; widgets give a small pulse when clicked.
 
-### Right-clicking an app
+### Right-click menus
+
+Menus open just above the dock with a small arrow pointing at the icon, like in Apple's Dock, so they never cover the icons next to it: right-click another icon and its menu opens straight away. This goes for apps, widgets, groups, the Trash and the dock background.
 
 | App | Options |
 |---|---|
-| Pinned | Show in Finder · Move to Group · Remove from Dock · **Quit** |
-| Inside a group | Move to Dock · Remove from Group · **Quit** |
-| Open, not pinned | Keep in Dock · **Quit** |
+| Open | Its windows · its main actions, from its File menu (New Window, New Event…) · **Options** › · Hide · **Quit** · Force Quit |
+| Pinned, closed | Show in Finder · Move to Group · Remove from Dock · Quit (greyed out) |
+| Inside a group, closed | Move to Dock · Remove from Group · Quit (greyed out) |
 
-**Quit** is always the last option and is greyed out if the app isn't open.
+Under **Options**, an open app has the same choices it has when closed (or **Keep in Dock** if it isn't pinned). The windows and actions need the Accessibility permission. Each dock shows its own menu: right-clicking in Apple's Dock still opens Apple's.
 
 ### 16 widgets
 
@@ -59,7 +61,7 @@ You only need to do this once. Updates install the same way: download the new `.
 
 - **Clock & Date**: click to open Calendar.
 - **Weather**: for your location or your saved cities; right-click › **City** to switch quickly. Click to open the Weather app.
-- **Music**: the song playing in Spotify or Music, with previous, play/pause and next buttons. Click to open the player.
+- **Music**: the song playing in any app (Spotify, Music, a browser…), with previous, play/pause and next buttons. Click to open the app that's playing.
 - **CPU & Memory**, **Disk & Network**: live usage; click to open Activity Monitor.
 - **Upcoming Events**: your next Calendar event and how long until it starts.
 - **Reminders**: your pending tasks; you can mark them as done right from the dock.
@@ -77,7 +79,7 @@ Each widget can only be added once.
 ### Customization
 
 - **Each widget**: **compact** (icon-sized) or **wide** version, **background color** and its own options: 12- or 24-hour format, seconds, weather cities, °C or °F, Pomodoro minutes, how many items to show…
-- **Position**: bottom, left or right.
+- **Position**: bottom, top, left or right. At the top, below the menu bar, it can live alongside Apple's Dock with just your widgets.
 - **Icon size**: small, medium or large.
 - **Automatically Hide**: the dock hides and comes back when you move the pointer to the edge of the screen.
 - **Dock to Use**: MyDock only, MyDock alongside Apple's Dock, or back to Apple's.
@@ -101,12 +103,12 @@ MyDock only asks for a permission when something needs it, and macOS remembers i
 | For | Permission |
 |---|---|
 | Weather for your location | Location (optional: without it, add your cities by hand) |
-| Music and Trash | Control Spotify or Music, and Finder (to know whether the Trash has items and to empty it) |
+| Trash | Finder (to know whether the Trash has items and to empty it) |
 | Upcoming Events | Calendar |
 | Reminders | Reminders |
 | Downloads | Downloads folder |
 | Screenshots | Desktop folder (or wherever you save screenshots) |
-| Fit windows to the dock | Accessibility |
+| Fit windows to the dock, and an open app's windows and actions in its right-click menu | Accessibility |
 
 If you say no, the widget shows "No permission"; clicking it takes you to the setting to grant it.
 
@@ -138,7 +140,7 @@ Yes: right-click › **Dock to Use › MyDock Only**. When MyDock quits, Apple's
 Turn on **Fit windows to the dock** in Settings › General and grant the Accessibility permission.
 
 **Why doesn't the song I'm listening to show up?**
-The music widget works with Spotify and Apple's Music app. Other players aren't detected.
+The music widget shows whatever macOS shows as Now Playing in Control Center. If a player doesn't appear there, MyDock can't see it either.
 
 ## Uninstall
 

@@ -66,10 +66,9 @@ struct TrashView: View {
                     image: NSImage(named: trash.full ? NSImage.trashFullName : NSImage.trashEmptyName),
                     label: t("Papelera"), value: trash.full ? t("Con elementos") : t("Vacía"),
                     action: { trash.open() })
-            .contextMenu {
-                Button(t("Abrir")) { trash.open() }
-                Divider()
-                Button(t("Vaciar papelera…")) { trash.empty() }.disabled(!trash.full)
+            .rightClickMenu(edge: edge) {
+                nsMenu([.item(t("Abrir")) { trash.open() }, .divider,
+                        .item(t("Vaciar papelera…"), trash.full ? { trash.empty() } : nil)])
             }
             .background(GeometryReader { g in
                 Color.clear.preference(key: ItemFrames.self, value: [TrashModel.id: g.frame(in: .global)])

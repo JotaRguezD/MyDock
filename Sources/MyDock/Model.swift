@@ -100,7 +100,7 @@ struct WidgetSettings: Codable, Equatable {
     var hideDisk: Bool?, hideNetwork: Bool?                          // disco y red
     var rgbFormat: Bool?                                             // selector de color
 }
-enum DockPosition: String, Codable { case left, bottom, right }
+enum DockPosition: String, Codable { case left, bottom, right, top }
 
 struct DockItem: Codable, Identifiable, Equatable {
     var id = UUID()
@@ -243,9 +243,9 @@ final class DockStore: ObservableObject {
 
     var iconSize: CGFloat { CGFloat(config.iconSize ?? 48) }
     var position: DockPosition { config.position ?? .bottom }
-    var vertical: Bool { position != .bottom }
+    var vertical: Bool { position == .left || position == .right }
     /// Hacia dónde se abren los popovers: siempre hacia el interior de la pantalla.
-    var popoverEdge: Edge { [.left: .trailing, .right: .leading][position] ?? .top }
+    var popoverEdge: Edge { [.left: .trailing, .right: .leading, .top: .bottom][position] ?? .top }
 
     func settings(_ id: UUID) -> WidgetSettings { config.items.first { $0.id == id }?.settings ?? WidgetSettings() }
 
@@ -326,7 +326,9 @@ final class RunningApps: ObservableObject {
     init() {
         refresh()
         let nc = NSWorkspace.shared.notificationCenter
-        for name in [NSWorkspace.didLaunchApplicationNotification, NSWorkspace.didTerminateApplicationNotification] {
+        // Al activarse también: algunas apps arrancan en la barra de menús y luego pasan a tener icono (NordVPN).
+        for name in [NSWorkspace.didLaunchApplicationNotification, NSWorkspace.didTerminateApplicationNotification,
+                     NSWorkspace.didActivateApplicationNotification] {
             nc.addObserver(forName: name, object: nil, queue: .main) { [weak self] _ in self?.refresh() }
         }
     }
@@ -348,7 +350,13 @@ final class RunningApps: ObservableObject {
     /// La app abierta de esa ruta, para poder salir de ella. Se busca entre todas las abiertas (también las que
     /// viven en la barra de menús), nunca Finder: macOS lo mantiene siempre abierto.
     func quittable(_ path: String) -> NSRunningApplication? {
-        guard let id = Bundle(path: path)?.bundleIdentifier, id != "com.apple.finder", ids.contains(id) else { return nil }
+        guard let app = app(path), app.bundleIdentifier != "com.apple.finder" else { return nil }
+        return app
+    }
+
+    /// La app abierta de esa ruta (también Finder y las que viven en la barra de menús).
+    func app(_ path: String) -> NSRunningApplication? {
+        guard let id = Bundle(path: path)?.bundleIdentifier, ids.contains(id) else { return nil }
         return NSRunningApplication.runningApplications(withBundleIdentifier: id).first
     }
 

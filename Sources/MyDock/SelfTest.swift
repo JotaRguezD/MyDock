@@ -48,6 +48,13 @@ func selfTest() {
     precondition(dockFrame(dock, screen: screen, visible: visible, .left, hidden: true).maxX == 0)
     precondition(dockFrame(dock, screen: screen, visible: visible, .right, hidden: false).maxX == 1000)
     precondition(dockFrame(dock, screen: screen, visible: visible, .right, hidden: true).minX == 1000)
+    precondition(dockFrame(dock, screen: screen, visible: visible, .top, hidden: false).maxY == 775)  // bajo la barra de menús
+    precondition(dockFrame(dock, screen: screen, visible: visible, .top, hidden: true).minY == 800)
+    precondition(isAtEdge(NSPoint(x: 500, y: 799), of: screen, .top))
+    // Menú del clic derecho: fuera del dock y centrado en el icono.
+    let icon = NSRect(x: 100, y: 10, width: 48, height: 48), menuSize = NSSize(width: 200, height: 150)
+    precondition(menuOrigin(menuSize, .bottom, icon: icon, dock: NSRect(x: 0, y: 0, width: 600, height: 70)) == NSPoint(x: 24, y: 231))
+    precondition(menuOrigin(menuSize, .left, icon: icon, dock: NSRect(x: 0, y: 0, width: 70, height: 600)).x == 81)
     precondition(isAtEdge(NSPoint(x: 999, y: 400), of: screen, .right))
     precondition(!isAtEdge(NSPoint(x: 999, y: 400), of: screen, .left))
     precondition(isAtEdge(NSPoint(x: 0, y: 400), of: screen, .left))
@@ -62,6 +69,8 @@ func selfTest() {
     precondition(fittedFrame(CGRect(x: 100, y: 100, width: 400, height: 300), dock: bar, area: fitArea, .bottom) == nil) // no llega al borde
     precondition(fittedFrame(CGRect(x: 0, y: 400, width: 250, height: 400), dock: bar, area: fitArea, .bottom) == nil)   // no pasa por debajo del dock
     let sideBar = CGRect(x: 0, y: 200, width: 90, height: 400)
+    precondition(fittedFrame(maximized, dock: CGRect(x: 300, y: 25, width: 400, height: 80), area: fitArea, .top)
+                 == CGRect(x: 0, y: 105, width: 1000, height: 695))
     precondition(fittedFrame(maximized, dock: sideBar, area: fitArea, .left) == CGRect(x: 90, y: 25, width: 910, height: 775))
     precondition(fittedFrame(CGRect(x: 0, y: 25, width: 1000, height: 120), dock: bar, area: fitArea, .bottom) == nil) // quedaría diminuta
 

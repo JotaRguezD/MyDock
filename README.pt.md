@@ -30,7 +30,7 @@ Só é preciso fazer isso uma vez. As atualizações são instaladas da mesma fo
 
 ### Apps, pastas e grupos
 
-- **Fixe apps e pastas** arrastando-os do Finder. Para reorganizá-los, arraste os ícones dentro do Dock.
+- **Fixe apps e pastas** arrastando-os do Finder; ao clicar numa pasta, ela abre no Finder. Para reorganizá-los, arraste os ícones dentro do Dock.
 - **Apps abertos**: os que não estão fixados aparecem sozinhos depois dos fixados, como no Dock da Apple. Um ponto sob o ícone indica que o app está aberto.
 - **Grupos**: vários apps em um só ícone; ao clicar, abre uma pequena janela com todos. Solte um app sobre um grupo para adicioná-lo.
 - **Separadores e espaços**: quantos você quiser, onde quiser.
@@ -38,15 +38,17 @@ Só é preciso fazer isso uma vez. As atualizações são instaladas da mesma fo
 - **Apps e widgets ficam em áreas separadas**: primeiro os apps, depois os widgets, com um separador entre eles.
 - **Animações**: ao abrir um app, o ícone pula até que ele termine de abrir; os widgets dão um pequeno pulso ao serem clicados.
 
-### Clique com o botão direito em um app
+### Menus do clique com o botão direito
+
+Os menus abrem logo acima do Dock com uma pequena seta apontando para o ícone, como no Dock da Apple, e assim nunca cobrem os ícones ao lado: clique com o botão direito em outro ícone e o menu dele abre na hora. Vale para apps, widgets, grupos, o Lixo e o fundo do Dock.
 
 | App | Opções |
 |---|---|
-| Fixado | Mostrar no Finder · Mover para grupo · Remover do Dock · **Encerrar** |
-| Dentro de um grupo | Tirar para o Dock · Remover do grupo · **Encerrar** |
-| Aberto, não fixado | Manter no Dock · **Encerrar** |
+| Aberto | Suas janelas · suas ações principais, do menu Arquivo (Nova janela, Novo evento…) · **Opções** › · Ocultar · **Encerrar** · Forçar encerrar |
+| Fixado, fechado | Mostrar no Finder · Mover para grupo · Remover do Dock · Encerrar (em cinza) |
+| Dentro de um grupo, fechado | Tirar para o Dock · Remover do grupo · Encerrar (em cinza) |
 
-**Encerrar** é sempre a última opção e aparece em cinza se o app não estiver aberto.
+Em **Opções**, um app aberto tem as mesmas escolhas de quando está fechado (ou **Manter no Dock** se não estiver fixado). As janelas e as ações precisam da permissão de Acessibilidade. Cada Dock mostra o seu próprio menu: clicar com o botão direito no Dock da Apple continua abrindo o da Apple.
 
 ### 16 widgets
 
@@ -59,7 +61,7 @@ Só é preciso fazer isso uma vez. As atualizações são instaladas da mesma fo
 
 - **Relógio e data**: ao clicar, abre o Calendário.
 - **Tempo**: o da sua localização ou das suas cidades salvas; clique com o botão direito › **Cidade** para trocar rapidamente. Ao clicar, abre o app Tempo.
-- **Música**: a música tocando no Spotify ou no Música, com botões de anterior, reproduzir/pausar e próxima. Ao clicar, abre o player.
+- **Música**: a música tocando em qualquer app (Spotify, Música, um navegador…), com botões de anterior, reproduzir/pausar e próxima. Ao clicar, abre o app que está tocando.
 - **CPU e memória**, **Disco e rede**: uso em tempo real; ao clicar, abrem o Monitor de Atividade.
 - **Próximos eventos**: seu próximo evento do Calendário e quanto falta.
 - **Lembretes**: suas tarefas pendentes; você pode marcá-las como concluídas no próprio Dock.
@@ -77,7 +79,7 @@ Cada widget só pode ser adicionado uma vez.
 ### Personalização
 
 - **Cada widget**: versão **compacta** (do tamanho de um ícone) ou **ampla**, **cor de fundo** e suas próprias opções: formato de 12 ou 24 horas, segundos, cidades do tempo, °C ou °F, minutos do Pomodoro, quantos itens mostrar…
-- **Posição**: embaixo, à esquerda ou à direita.
+- **Posição**: embaixo, em cima, à esquerda ou à direita. Em cima, abaixo da barra de menus, pode conviver com o Dock da Apple só com os seus widgets.
 - **Tamanho dos ícones**: pequeno, médio ou grande.
 - **Ocultar automaticamente**: o Dock se oculta e volta quando você leva o ponteiro até a borda da tela.
 - **Dock em uso**: só MyDock, MyDock e o da Apple, ou voltar ao da Apple.
@@ -101,12 +103,12 @@ O MyDock só pede uma permissão quando algo precisa dela, e o macOS se lembra:
 | Para | Permissão |
 |---|---|
 | Tempo da sua localização | Localização (opcional: sem ela, adicione suas cidades manualmente) |
-| Música e Lixo | Controlar o Spotify ou o Música, e o Finder (para saber se o Lixo tem itens e esvaziá-lo) |
+| Lixo | Finder (para saber se o Lixo tem itens e esvaziá-lo) |
 | Próximos eventos | Calendários |
 | Lembretes | Lembretes |
 | Transferências | Pasta Transferências |
 | Capturas de tela | Pasta Mesa (ou onde você salva as capturas) |
-| Ajustar janelas ao Dock | Acessibilidade |
+| Ajustar janelas ao Dock, e as janelas e ações de um app aberto no seu menu do botão direito | Acessibilidade |
 
 Se você recusar, o widget mostrará "Sem permissão"; um clique leva ao ajuste para concedê-la.
 
@@ -138,7 +140,7 @@ Sim: clique com o botão direito › **Dock em uso › Só MyDock**. Ao encerrar
 Ative **Ajustar janelas ao Dock** em Ajustes › Geral e conceda a permissão de Acessibilidade.
 
 **Por que a música que estou ouvindo não aparece?**
-O widget Música funciona com o Spotify e com o app Música da Apple. Outros players não são detectados.
+O widget Música mostra o mesmo que o macOS exibe em "A Tocar" na Central de Controle. Se um player não aparece ali, o MyDock também não consegue vê-lo.
 
 ## Desinstalar
 

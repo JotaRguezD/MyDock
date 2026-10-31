@@ -1,4 +1,4 @@
-"NSAppleEventsUsageDescription" = "MyDock ohjaa Musiikkia tai Spotifya musiikkiwidgetiä varten ja kysyy Finderilta roskakorista.";
+"NSAppleEventsUsageDescription" = "MyDock kysyy Finderilta roskakorista: onko siinä jotain, ja sen tyhjentämiseksi.";
 "NSLocationUsageDescription" = "MyDock käyttää likimääräistä sijaintiasi näyttääkseen sään siellä, missä olet.";
 "NSLocationWhenInUseUsageDescription" = "MyDock käyttää likimääräistä sijaintiasi näyttääkseen sään siellä, missä olet.";
 "NSCalendarsFullAccessUsageDescription" = "MyDock näyttää seuraavan tapahtumasi Tulevat tapahtumat -widgetissä.";

@@ -1,4 +1,4 @@
-"NSAppleEventsUsageDescription" = "MyDock controla Música o Spotify per al giny de música i consulta el Finder sobre la Paperera.";
+"NSAppleEventsUsageDescription" = "MyDock consulta el Finder sobre la Paperera: si té elements i per buidar-la.";
 "NSLocationUsageDescription" = "MyDock fa servir la teva ubicació aproximada per mostrar el temps d’on ets.";
 "NSLocationWhenInUseUsageDescription" = "MyDock fa servir la teva ubicació aproximada per mostrar el temps d’on ets.";
 "NSCalendarsFullAccessUsageDescription" = "MyDock mostra el teu proper esdeveniment al giny Propers esdeveniments.";
